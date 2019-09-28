@@ -5,6 +5,7 @@
 html {
   height: 100%;
 }
+
 body {
   min-height: 100%;
   margin: 0;
@@ -60,7 +61,6 @@ h2 {
   width: 960px;
   display: block;
   margin: auto;
-  align-items: center;
 }
 
 #name {
@@ -92,7 +92,7 @@ a:hover {
 section {
   background-color: #ffffff;
   border-color: #dddddd;
-  width: 960px;
+  max-width: 960px;
   margin: 30px auto;
   padding: 0 30px 20px 30px;
   overflow: auto;
@@ -201,4 +201,47 @@ input {
   bottom: 15px;
   font-size: 1.1em;
   cursor: pointer;
+}
+
+@media screen and (max-width: 980px) {
+  body {
+    display: block;
+    min-width: 100%;
+  }
+  section {
+    display: block;
+    min-width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 640px) {
+  .container {
+    display: flex;
+    max-width: 640px;
+  }
+  .nav {
+    display: flex;
+    max-width: 60%;
+    align-items: center;
+    align-content: center;
+  }
+  a {
+    text-decoration: none;
+    color: #777777;
+    padding: 10px;
+    margin: 6px;
+    font-size: 19px;
+    line-height: 90px;
+
+    display: inline;
+  }
+  #name {
+    padding: 0 15px;
+    margin: 5px 0 0 0;
+    max-width: 40%;
+    display: inline-block;
+  }
 }
